@@ -28,7 +28,12 @@ document.write(2 + 2);
 
 // FUNCTION
 
-function myFunction(p1, p2) {
+function myFun1(p1, p2) {
+	//BROKEN?
 	return p1 * p2;
+	document.getElementById("maths").innerHTML = myFun1(12, 11);
 }
-document.getElementById("maths").innerHTML = myFunction(12, 11);
+
+function myFun2() {
+	document.getElementById("click").innerHTML = "Thanks.";
+}

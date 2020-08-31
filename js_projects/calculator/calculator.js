@@ -34,7 +34,7 @@ function handleOperator(nextop) {
     const { firstop, dispvalue, operator } = Calculator
     const valueofinput = parseFloat(dispvalue);
     if (operator && Calculator.waitsecop) {
-        Calculator.operator - nextop;
+        Calculator.operator = nextop;
         return;
     }
     if (firstop == null) {

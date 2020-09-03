@@ -21,4 +21,9 @@ function validate() {
         alert("Birthdate required.");
         return false;
     }
+    var t = document.forms["form1"]["phone"].value; // ADDED
+    if (t == "") {
+        alert("Phone number required.");
+        return false;
+    }
 }

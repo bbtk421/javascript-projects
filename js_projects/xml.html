@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="xmlExample"></p>
+    <script>
+        var xmlParser, xmlDoc;
+        var movie = "<movie>" + "<title>Back to the Future</title>" +
+            "<director>Robert Zemekis</director>" + "<starring>Christopher Lloyd, Michael J. Fox</starring>" +
+            "<year>1985</year>" + "</movie>";
+        xmlParser = new DOMParser();
+
+        xmlDoc = xmlParser.parseFromString(movie, "text/xml");
+
+        document.getElementById("xmlExample").innerHTML =
+            xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+
+    </script>
+</body>
+
+</html>

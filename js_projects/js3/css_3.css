@@ -1,0 +1,31 @@
+/* ADDED FADE IN TRANSITION & SWAPPED COLORS */
+
+body {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    opacity: 1;
+    transition:  1s opacity;
+    color: white;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+html {
+    background-color: black;
+}
+
+/* ADDED ANIMATION */
+
+div {
+    position: relative;
+    animation: mymove 5s infinite; 
+}
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 400px;}
+    50%  {top: 0px;}
+    75%  {top: 400px;}
+    100% {top: 0px;}
+}

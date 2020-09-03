@@ -7,9 +7,11 @@
     <title>HTML 3</title>
     <link rel="stylesheet" type="text/css" href="./css_3.css">
     <script src="./js_3.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <script>document.body.className += ' fade-out'; // ADD CLASS </script>
     <div>
         <h2>Starship Captains</h2>
         <h4>Click the ship to see its captain</h4>
@@ -21,7 +23,11 @@
             <li onclick="shipCapt(this)" id="Ghost" data-capt-type="Hera Sindula">Ghost</li>
         </ul>
     </div>
-
+    <script>
+        $(function () {
+            $('body').removeClass('fade-out'); // REMOVING CLASS
+        });
+    </script>
 </body>
 
 </html>
